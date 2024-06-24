@@ -27,17 +27,17 @@ export async function GET(request: Request) {
 
 
 
-const postSchema = yup.object({
-  description: yup.string().required(),
-  complete: yup.boolean().optional().default(false),
+/* const postSchema = yup.object({
+  name: yup.string().required(),
+  downloaded: yup.boolean().optional().default(false),
 });
 
 export async function POST(request: Request) { 
 
   try {
-    const { download, name } = await postSchema.validate( await request.json() );
+    const { downloaded, name } = await postSchema.validate( await request.json() );
 
-    const game = await prisma.game.create({ data: { download, name } })
+    const game = await prisma.game.create({ data: { downloaded, name } })
   
     
     return NextResponse.json(game);
@@ -46,3 +46,4 @@ export async function POST(request: Request) {
     return NextResponse.json( error, { status: 400 } );
   }
 }
+ */
