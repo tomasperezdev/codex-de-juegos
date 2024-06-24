@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run prima:deploy && next build",
-    "prima:deplot": "npx prisma migrate deploy && prisma generate",
+    "build": "npm run prisma:deploy && next build",
+    "prisma:deploy": "npx prisma migrate deploy && prisma generate",
     "start": "next start",
     "lint": "next lint"
   },
