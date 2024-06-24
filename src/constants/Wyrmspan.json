@@ -1,0 +1,263 @@
+{
+  "title": "Wyrmspan",
+  "publisher": "Stonemaier Games",
+  "designer": "Connie Vogelmann",
+  "artist": "Clementine Campardou",
+  "players": "1-5",
+  "duration": "90 minutes",
+  "age": "14+",
+  "quick_answers": {
+    "quick_setup": "Place the Dragon Guild board in the center, shuffle dragon and cave cards, distribute starting resources, and begin with the start player marker.",
+    "in_depth_setup": [
+      "Place the Dragon Guild board in the center.",
+      "Select 1 of the 4 Dragon Guild tiles and place it on the Dragon Guild board.",
+      "Shuffle all dragon cards and place 3 face-up on the card display board.",
+      "Shuffle all cave cards and place 3 face-up on the card display board.",
+      "Place the round marker on the Round 1 space on the round tracker board.",
+      "Shuffle the objective tiles and place 4 at random on the round tracker board.",
+      "Place coins, eggs, and all tokens in a public supply within reach of all players.",
+      "Each player places their player mat in front of them.",
+      "Each player gains 3 resources of their choice.",
+      "Each player places 1 egg on one of the 2 nest icons on their player mat.",
+      "Each player places their starting coins to the left of their mat.",
+      "Each player places their adventurer in Base Camp on their player mat.",
+      "Each player places their guild token on the Dragon Guild space labeled 'START.'",
+      "Each player places their remaining player markers, dragons, and cave cards nearby.",
+      "Randomly give a player the start player marker, then begin the game."
+    ],
+    "overall_overview": "In Wyrmspan, players build a sanctuary for dragons by excavating spaces and enticing dragons to roost. The game is played over 4 rounds, with each round consisting of players taking turns to excavate, entice, or explore. The player with the most victory points at the end of the game wins."
+  },
+  "components": {
+    "page": 1,
+    "details": {
+      "coins": {
+        "silver": 45,
+        "gold": 25
+      },
+      "tokens": {
+        "meat": 25,
+        "crystal": 25,
+        "milk": 25
+      },
+      "cards": {
+        "dragon": 183,
+        "cave": 75
+      },
+      "eggs": 55,
+      "markers": {
+        "player": 8,
+        "guild": 1
+      },
+      "boards": {
+        "guild": 1,
+        "card_display": 1,
+        "round_tracker": 1
+      },
+      "tiles": {
+        "guild": 4,
+        "objective": 10
+      },
+      "mats": {
+        "player": 5
+      },
+      "misc": {
+        "round_marker": 1,
+        "start_player_marker": 1,
+        "score_pad": 1,
+        "multiplier_tokens": 20,
+        "quick_start_guides": 10
+      }
+    }
+  },
+  "setup": {
+    "page": 2,
+    "steps": [
+      "Place the Dragon Guild board in the center.",
+      "Select 1 of the 4 Dragon Guild tiles and place it on the Dragon Guild board.",
+      "Shuffle all dragon cards and place 3 face-up on the card display board.",
+      "Shuffle all cave cards and place 3 face-up on the card display board.",
+      "Place the round marker on the Round 1 space on the round tracker board.",
+      "Shuffle the objective tiles and place 4 at random on the round tracker board.",
+      "Place coins, eggs, and all tokens in a public supply within reach of all players.",
+      "Each player places their player mat in front of them.",
+      "Each player gains 3 resources of their choice.",
+      "Each player places 1 egg on one of the 2 nest icons on their player mat.",
+      "Each player places their starting coins to the left of their mat.",
+      "Each player places their adventurer in Base Camp on their player mat.",
+      "Each player places their guild token on the Dragon Guild space labeled 'START.'",
+      "Each player places their remaining player markers, dragons, and cave cards nearby.",
+      "Randomly give a player the start player marker, then begin the game."
+    ]
+  },
+  "overview": {
+    "page": 4,
+    "description": "Build a sanctuary for dragons by excavating spaces and enticing dragons to roost. The game is played over 4 rounds, with players taking turns to excavate, entice, or explore."
+  },
+  "gameplay": {
+    "page": 4,
+    "phases": [
+      {
+        "name": "Excavate",
+        "page": 5,
+        "description": "Play a cave card into an empty space in a cave to provide benefits and a space to hold a dragon.",
+        "steps": [
+          "Select an empty space in one of your caves.",
+          "Pay the cost to excavate (coins and eggs).",
+          "Place a cave card from your hand onto the empty space.",
+          "Activate 'when played' benefits of the cave card.",
+          "Activate 'when covered' benefits on the player mat space covered by the cave card."
+        ]
+      },
+      {
+        "name": "Entice",
+        "page": 6,
+        "description": "Play a dragon card into an excavated space to gain immediate benefits.",
+        "steps": [
+          "Select a dragon from your hand.",
+          "Pay the base cost and additional costs of the dragon.",
+          "Place the dragon into an excavated space matching its habitat.",
+          "Activate 'when played' benefits of the dragon."
+        ]
+      },
+      {
+        "name": "Explore",
+        "page": 10,
+        "description": "Move your adventurer through a cave to activate abilities and gain benefits.",
+        "steps": [
+          "Pay the cost to enter the cave (coins and eggs).",
+          "Move the adventurer from left to right through the cave.",
+          "Activate all 'if activated' abilities the adventurer passes."
+        ]
+      }
+    ]
+  },
+  "additional_rules": {
+    "page": 11,
+    "details": [
+      "Abilities that allow all players to do something are activated in clockwise order.",
+      "Items acquired go to the player's hand or supply by default.",
+      "Capacity limits: 9 resource tokens, 9 cards, and 9 coins at the end of each turn.",
+      "Cards and cave cards are refilled at the end of each player's turn."
+    ]
+  },
+  "dragon_guild": {
+    "page": 12,
+    "description": "Players earn Dragon Guild advancements by walking their adventurers through caves or playing certain dragons or cave cards.",
+    "steps": [
+      "Move guild token 1 space clockwise around the Dragon Guild track.",
+      "Gain the benefit printed on the space landed on.",
+      "Place a player marker on the Dragon Guild tile when landing on a brown space."
+    ]
+  },
+  "round_end_upkeep": {
+    "page": 14,
+    "steps": [
+      "Players discard any coins and eggs paid as costs on their player mat.",
+      "Activate 'once per round' dragon abilities.",
+      "Score the round’s objective and place player markers on the round tracker.",
+      "Move the round marker 1 space to the right.",
+      "Refresh the cards in the display.",
+      "Each player gains 6 coins and 1 egg.",
+      "The start player marker advances 1 player clockwise."
+    ]
+  },
+  "game_end_scoring": {
+    "page": 15,
+    "categories": [
+      "Markers on the Dragon Guild",
+      "Printed VP values on visible dragons on the player mat",
+      "End game abilities on visible dragons on the player mat",
+      "Eggs: Gain 1 VP per egg unless specified otherwise",
+      "Cached resources: Gain 1 VP per cached resource unless specified otherwise",
+      "Tucked cards: Gain 1 VP per tucked dragon unless specified otherwise",
+      "Public objectives: Ties are friendly",
+      "Excess items and coins: Gain 1 VP per coin and 1 VP for every 4 other items"
+    ]
+  },
+  "dragon_abilities": {
+    "page": 7,
+    "types": [
+      {
+        "type": "when_played",
+        "description": "Activate immediately upon playing the dragon card.",
+        "examples": ["Draw additional cards", "Gain resources"]
+      },
+      {
+        "type": "if_activated",
+        "description": "Activate when an adventurer lands on the dragon card. Cannot be activated the turn the dragon is played.",
+        "examples": ["Cache resources", "Gain additional actions"]
+      },
+      {
+        "type": "once_per_round",
+        "description": "Provide benefits at the end of every round. Activate during the round end or upkeep phase.",
+        "examples": ["Extra resources", "Points at the end of each round"]
+      },
+      {
+        "type": "end_game",
+        "description": "Provide Victory Points (VP) at the end of the game for meeting certain conditions.",
+        "examples": [
+          "Bonus points for specific types of resources cached by the end of the game"
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "page": 4,
+    "definitions": [
+      {
+        "term": "Player Mat",
+        "definition": "Personal mat that holds cave cards, dragons, and eggs."
+      },
+      {
+        "term": "Cave Card",
+        "definition": "Square cards added to the player mat through the excavate action."
+      },
+      {
+        "term": "Dragon",
+        "definition": "Rectangular cards placed on excavated spaces."
+      },
+      {
+        "term": "Resources",
+        "definition": "Meat tokens, gold tokens, crystal tokens, and milk tokens."
+      },
+      {
+        "term": "Cave",
+        "definition": "A row of spaces on the player mat."
+      },
+      {
+        "term": "Discard/Pay",
+        "definition": "Remove items from the player area, hand, or nests, placing them in the public supply."
+      }
+    ]
+  },
+  "icons": {
+    "page": 16,
+    "descriptions": [
+      "Coin",
+      "Gold",
+      "Meat",
+      "Milk",
+      "Crystal",
+      "Any Resource",
+      "No Resource Cost",
+      "Cave Card",
+      "Dragon Card",
+      "Egg",
+      "Nest Icon (Egg Capacity)",
+      "Dragon Guild",
+      "Refresh"
+    ]
+  },
+  "how_to_play": {
+    "page": 5,
+    "steps": [
+      "Excavate by playing a cave card into the leftmost empty space in one of your caves.",
+      "Entice a dragon by playing a dragon card into the leftmost excavated space in one cave.",
+      "Explore your caves to activate abilities and gain benefits."
+    ]
+  },
+  "example_turn": {
+    "page": 10,
+    "description": "Detailed example of a turn where a player explores their Crimson Cavern and gains benefits from activating abilities on dragon cards."
+  }
+}
