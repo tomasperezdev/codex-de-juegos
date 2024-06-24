@@ -2,6 +2,10 @@
 Pasos para levantar la app en desarrollo
 
 
+
+https://github.com/tomasperezdev/codex-de-juegos/assets/5216580/a46e0cd8-1199-49d8-b323-88844cb420cf
+
+
 1. Levantar la base de datos
 ```
 docker compose up -d
