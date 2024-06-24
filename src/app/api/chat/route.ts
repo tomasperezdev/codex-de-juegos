@@ -20,15 +20,18 @@ export const maxDuration = 30;
 export async function POST(req: Request) {
 
   const cookieStore = cookies()
-  const currentGame = cookieStore.get('currentGame')?.value
+  const currentGame = cookieStore.get('currentGame')?.value as string
   console.log('currentGame', currentGame)
   //const { game,chatHistory } = await postSchema.validate( await request.json() );
   const { messages } = await req.json();
 
+  const gameJsonData : { [key: string]: any } = gamesRulebookData
+  const stringyFiedData = JSON.stringify(gameJsonData[currentGame])
+
   const result = await streamText({
     model: openai('gpt-4o'),
     messages: convertToCoreMessages(messages),
-    system:`Use the following json data to answer the questions and gather the overview, setup and scoring information: ${JSON.stringify(gamesRulebookData[currentGame])}`,
+    system:`Use the following json data to answer the questions and gather the overview, setup and scoring information: ${stringyFiedData}`,
     tools: {
       answerSpecificQuestion: {
         description:
