@@ -2,13 +2,13 @@
 
 import { Game } from "@prisma/client";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Message, useChat } from "@ai-sdk/react";
 import { ToolInvocation } from "ai";
 import { getGame } from "@/games/actions/game-actions";
 import Image from "next/image";
 import { hourglass } from "ldrs";
-import { IoPaperPlane, IoReload } from "react-icons/io5";
+import { IoPaperPlane, IoReload, IoTimeSharp } from "react-icons/io5";
 import Link from "next/link";
 import LOGO from "../../../../assets/codexLogo.png";
 import { setCookie } from "cookies-next";
@@ -19,7 +19,7 @@ export default function RestTodosPage() {
   const pathname = usePathname();
   const id = pathname.split("/").pop();
   const [chatId, setChatId] = useState<number | undefined>(undefined);
-
+  const sendButtonRef = useRef<HTMLButtonElement>(null);
   const [game, setGame] = useState<Game | null>(null);
 
   const {
@@ -29,6 +29,8 @@ export default function RestTodosPage() {
     handleSubmit,
     addToolResult,
     isLoading,
+    setInput,
+    error,
   } = useChat({
     id: chatId?.toString(),
   });
@@ -47,32 +49,8 @@ export default function RestTodosPage() {
     if (!game) return;
     const gameName = game.name;
     const message = `What is the ${toolName} for ${gameName}`;
-    handleInputChange({ target: { value: message } });
-    handleSubmit({
-      preventDefault: () => {},
-      nativeEvent: undefined,
-      currentTarget: undefined,
-      target: undefined,
-      bubbles: false,
-      cancelable: false,
-      defaultPrevented: false,
-      eventPhase: 0,
-      isTrusted: false,
-      isDefaultPrevented: function (): boolean {
-        throw new Error("Function not implemented.");
-      },
-      stopPropagation: function (): void {
-        throw new Error("Function not implemented.");
-      },
-      isPropagationStopped: function (): boolean {
-        throw new Error("Function not implemented.");
-      },
-      persist: function (): void {
-        throw new Error("Function not implemented.");
-      },
-      timeStamp: 0,
-      type: "",
-    });
+    setInput(message);
+    if (sendButtonRef.current) sendButtonRef.current.click();
   };
 
   const resetUseChat = () => {
@@ -130,6 +108,7 @@ export default function RestTodosPage() {
                       Send
                     </button> */}
                     <button
+                      ref={sendButtonRef}
                       type="submit"
                       className="bg-blue-500 text-white px-2 mr-4 py-2 rounded-full hover:bg-blue-600"
                     >
@@ -145,8 +124,13 @@ export default function RestTodosPage() {
                 </div>
               </form>
             </div>
-
-            {isLoading && ( // Default values shown
+            {error && (
+              <>
+                <IoTimeSharp className="text-red-500" size="40" />
+                {error?.message.toString()}
+              </>
+            )}
+            {isLoading && (
               <l-hourglass
                 size="40"
                 bg-opacity="0.1"
